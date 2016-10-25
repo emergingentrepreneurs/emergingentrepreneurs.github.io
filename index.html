@@ -17,7 +17,31 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="alternate" type="application/rss+xml" title="Emerging Entrepreneurs 2017 Information Pack" href="/feed.xml">
-</head>
+  <script>
+    /**
+    * Function that tracks a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackOutboundLink = function(url) {
+      ga('send', 'event', 'infoPackDownload', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+      });
+    }
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-77642421-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
   <body>
     <header class="student-image-background">
       <div class="wrapper">
@@ -44,7 +68,7 @@
             or not (you’ll learn why inside).
           </p>
           <div class="button-wrap">
-            <a href="https://s3-ap-southeast-2.amazonaws.com/emergingentrepreneurs/resources/EE+2017+Info+Pack.zip" class="orange-button">Download Now</a>
+            <a onclick="trackOutboundLink('https://s3-ap-southeast-2.amazonaws.com/emergingentrepreneurs/resources/EE+2017+Info+Pack.zip'); return false;" href="https://s3-ap-southeast-2.amazonaws.com/emergingentrepreneurs/resources/EE+2017+Info+Pack.zip" class="orange-button">Download Now</a>
           </div>
           <p>
             If you’d like more information right now, please email <a href="mailto:info@emergingentrepreneurs.com.au">
@@ -66,15 +90,5 @@
         <a href="mailto:info@emergingentrepreneurs.com.au">info@emergingentrepreneurs.com.au</a>
       </div>
     </footer>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-77642421-3', 'auto');
-      ga('send', 'pageview');
-
-    </script>
   </body>
 </html>
