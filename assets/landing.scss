@@ -1,0 +1,101 @@
+---
+---
+
+body {
+  background-color: black;
+  p, a, h1, h2 {
+    color: #FFF;
+  }
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+    color: #EA893F;
+  }
+  &:visited {
+    color: #FFF;
+  }
+}
+
+.student-image-background {
+  background-image: url("https://s3-ap-southeast-2.amazonaws.com/emergingentrepreneurs/static_images/blue-landing-header-image.png");
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+  .white-vertical-icon {
+    display: inline-block;
+    float: left;
+    width: 200px;
+  }
+  @media screen and (max-width: 740px) {
+    .white-vertical-icon {
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+  }
+  .header-title {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    max-width: 540px;
+  }
+  @media screen and (max-width: 740px) {
+      .header-title {
+        margin-top: 150px;
+        display: block;
+        text-align: center;
+        float: none;
+        max-width: none;
+      }
+    }
+}
+
+@media screen and (max-width: 740px) {
+  .student-image-background {
+    margin-bottom: 0px;
+  }
+}
+
+.blue-footer {
+  margin-top: 100px;
+  padding: 40px 0px;
+  background-color: #2E9FC2;
+}
+
+.button-wrap {
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.orange-button {
+  font-size: 24px;
+  padding: 20px 30px;
+  background-color: #EA893F;
+  text-transform: uppercase;
+  margin: 40px auto;
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #2E9FC2;
+  }
+}
+
+// 7:30: Team catchup
+// 8:15: Client meeting
+// 
